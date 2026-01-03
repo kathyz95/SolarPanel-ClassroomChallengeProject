@@ -1,4 +1,4 @@
-function printAndPlotData(sol, fval)
+function [theta_grid, r_grid, E_grid] = plotData(sol, fval)
 arguments (Input)
     sol (1,1) struct  % solution for the energy optimization problem
     fval (1,1) double {mustBeNumeric}  % the objective function value at the solution

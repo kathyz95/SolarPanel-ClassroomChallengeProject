@@ -19,7 +19,10 @@ r = optimvar('r','LowerBound',0.5,'UpperBound',4);
 % 3. Turn our energy function into something MATLAB can work with
 % This step wraps our energy function so MATLAB can plug in different
 % theta and r values while solving the problem.
-Eexpr = fcn2optimexpr(@energyFcn, theta, r);  % Convert our function into an expression
+% Get function handle to expected energyFcn in same directory
+expectedDir = fileparts(mfilename('fullpath'));
+energyFcnHandle = @(t, r) runLocalFunction(expectedDir, 'energyFcn', t, r);
+Eexpr = fcn2optimexpr(energyFcnHandle, theta, r);  % Convert our function into an expression
 
 % 4. Tell MATLAB what we want to maximize
 % We set our energy formula as the "objective" of the problem
