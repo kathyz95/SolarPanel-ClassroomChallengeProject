@@ -1,4 +1,4 @@
-classdef plotDataTest < AbstractSolarPanelOptimizationTest
+classdef PlotDataTest < AbstractSolarPanelOptimizationTest
     % plotDataTest - Unit tests for plotData
     %
     % Tests that plotData correctly creates a 3D surface plot
@@ -68,7 +68,7 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
     end
     
     methods (Test)
-        function testStep1_MeshgridHasCorrectSize(testCase)
+        function testStep1_meshgrid(testCase)
             [actualThetaGrid, actualRGrid, ~] = ...
                 testCase.runActualFunction('plotData', testCase.TestSol, testCase.TestFval);
 
@@ -91,7 +91,7 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
                 'r_grid should match expected values');
         end
         
-        function testStep2_EnergyValuesArePositive(testCase)
+        function testStep2_energyValues(testCase)
             [~, ~, actualEGrid] = ...
                 testCase.runActualFunction('plotData', testCase.TestSol, testCase.TestFval);
 
@@ -102,7 +102,7 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
                 'E_grid values should match expected implementation');
         end
         
-        function testStep3_SurfPlotCreated(testCase)
+        function testStep3_surfPlot(testCase)
             [surfObj, ~] = testCase.runAndAssertFigureCreated();
             
             % Verify the surf plot contains the correct data
@@ -118,7 +118,7 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
                 'surf ZData (E_grid) should match expected values');
         end
         
-        function testStep4_PlotHasAxisLabels(testCase)
+        function testStep4_plotAnnotations(testCase)
             [~, ax] = testCase.runAndAssertFigureCreated();
 
             title = get(get(ax, 'Title'), 'String');
@@ -134,7 +134,7 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
             testCase.verifyNotEmpty(colorbarObjs, 'Plot should have a colorbar');
         end
         
-        function testStep5_OptimalPointIsMarked(testCase)
+        function testStep5_optimalPoint(testCase)
             [~, ax] = testCase.runAndAssertFigureCreated();
             lineObjs = findall(ax, 'Type', 'line');
             testCase.assertTrue(~isempty(lineObjs), ...
@@ -145,9 +145,9 @@ classdef plotDataTest < AbstractSolarPanelOptimizationTest
             markerY = get(lineObjs(1), 'YData');
             markerZ = get(lineObjs(1), 'ZData');
 
-            testCase.NumElements(markerX, 1, "Expected a single optimal point to be marked on the surface.");
-            testCase.NumElements(markerY, 1, "Expected a single optimal point to be marked on the surface.");
-            testCase.NumElements(markerZ, 1, "Expected a single optimal point to be marked on the surface.");
+            testCase.verifyNumElements(markerX, 1, "Expected a single optimal point to be marked on the surface.");
+            testCase.verifyNumElements(markerY, 1, "Expected a single optimal point to be marked on the surface.");
+            testCase.verifyNumElements(markerZ, 1, "Expected a single optimal point to be marked on the surface.");
             
             testCase.verifyEqual(markerX, testCase.TestSol.theta, 'AbsTol', 0.01, ...
                 sprintf('Marker X should be at optimal theta=%.2f, got %.2f', ...

@@ -14,7 +14,8 @@ rVals = 0:0.1:1; % TODO: replace with appropriate range for r
 
 % Step 2: Replace with the right formula to calculate energy for every point on the meshgrid using element-wise operations
 % hint: this is very similar to energyFcn, but we're applying it to the
-% matrices we just created with meshgrid. You may consider using element-wise
+% matrices we just created with meshgrid.
+% Look at how to apply functions to matrices, or you may consider using element-wise
 % multiplication, see here:
 % https://www.mathworks.com/help/matlab/ref/double.times.html
 E_grid = zeros(size(theta_grid));
@@ -33,4 +34,5 @@ E_grid = zeros(size(theta_grid));
 % in 3-D space.
 % hint: remember the outputs of the function used to solve the optimization
 % problem!
+% hint: watch out for overwriting your existing plot!
 % TODO
