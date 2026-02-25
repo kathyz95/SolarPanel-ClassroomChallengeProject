@@ -1,4 +1,4 @@
-# Maximize Solar Panel Output for a Fixed Area
+# Maximizing Solar Panel Output for a Fixed Area
 
 ## Motivation
 Industries ranging from renewable energy companies to civil and electrical engineering firms frequently optimize solar panel layouts to maximize power output, especially as solar technology expands across residential rooftops, commercial buildings, and large‑scale solar farms. In this project, students will practice skills widely used in industry, including numerical optimization, MATLAB programming, and design‑based decision-making. With solar installations becoming more widespread, these skills will help those in engineering roles design sustainable energy systems in constrained environments.
@@ -30,7 +30,7 @@ Where:
 
 Your task: Find the optimal θ and r that maximize E(θ, r).
 
-# Suggested Steps
+### Suggested Steps
 
 1. Define the objective function in MATLAB: `E = @(x)...` where x(1)=theta, x(2)=r.
 2. Use `fmincon` to find the values of theta and r that maximize the energy output.
@@ -41,7 +41,7 @@ Your task: Find the optimal θ and r that maximize E(θ, r).
 4. Plot the objective function using `fsurf` or a mesh plot to visualize E(θ, r).
 5. Print the optimal angle, ratio, and corresponding energy output.
 
-# Expected Results for Project Solution
+### Expected Results for Project Solution
 
 - Numerical value for **Optimal Tilt Angle** (e.g. 39.8 degrees)
 - Numerical value for **Optimal Aspect Ratio** (e.g. 1.2)
@@ -56,12 +56,12 @@ Your task: Find the optimal θ and r that maximize E(θ, r).
 
 ## Suggested Background Material
 
-# 1. Basic Solar Energy Concepts
+### 1. Basic Solar Energy Concepts
 - How solar panels convert sunlight to electricity (photovoltaic effect)
 - Factors affecting solar output: tilt, orientation, shading, and surface area
 - Concept of solar irradiance and why it varies with angle
 
-# 2. Trigonometry and Geometry
+### 2. Trigonometry and Geometry
 - Understanding angles in degrees/radians
 - Cosine function and how it models directional effects
 - Aspect ratio and area constraints for rectangles
