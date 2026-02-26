@@ -5,7 +5,7 @@ Industries ranging from renewable energy companies to civil and electrical engin
 
 ## Project Description
 
-[![Open in MATLAB Online](
+[![Open in MATLAB Online](https://www.mathworks.com/images/responsive/global/open-in-matlab-online.svg)](https://matlab.mathworks.com/open/github/v1?repo=kathyz95/SolarPanel-ClassroomChallengeProject)
 
 Use MATLAB to formulate and solve an optimization problem: Given a fixed area, determine the optimal tilt angle and aspect ratio of a solar panel to maximize the total energy output.
 
