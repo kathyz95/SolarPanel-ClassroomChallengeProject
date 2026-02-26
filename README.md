@@ -66,23 +66,23 @@ Your task: Find the optimal θ and r that maximize E(θ, r).
 - Cosine function and how it models directional effects
 - Aspect ratio and area constraints for rectangles
 
-# 3. Introduction to Optimization
+### 3. Introduction to Optimization
 - Difference between maximizing and minimizing an objective function
 - Local vs. global optima (at a conceptual level)
 - Using constraints in optimization problems
 
-# 4. MATLAB Fundamentals
+### 4. MATLAB Fundamentals
 - Writing function handles (e.g., E = @(x) ...)
 - Working with vectors and indexing (x(1), x(2))
 - Plotting surfaces using `fsurf`, `mesh`, or `surf`
 - Basics of `fmincon` (objective functions, bounds, options)
 
-# 5. Numerical Modeling Skills
+### 5. Numerical Modeling Skills
 - Building simplified models of real systems
 - Understanding how assumptions influence results
 - Interpreting plots and optimization outputs
 
-# MathWorks Tutorials
+## MathWorks Tutorials
 - [MATLAB Onramp](https://matlabacademy.mathworks.com/details/matlab-onramp/gettingstarted)
 - [Optimization Onramp](https://matlabacademy.mathworks.com/details/optimization-onramp/optim)
 - [Optimization Workflow](https://www.mathworks.com/help/optim/ug/problem-based-workflow.html)
