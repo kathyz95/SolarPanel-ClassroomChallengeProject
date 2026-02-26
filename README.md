@@ -1,6 +1,6 @@
 # Maximizing Solar Panel Output for a Fixed Area
 
-<img width="2754/2" height="2094/2" alt="SolarPanel" src="https://github.com/user-attachments/assets/e17b68ad-85e9-46a9-b040-e7241b739df4" />
+<img width="688" height="524" alt="SolarPanel" src="https://github.com/user-attachments/assets/e17b68ad-85e9-46a9-b040-e7241b739df4" />
 
 ## Motivation
 Industries ranging from renewable energy companies to civil and electrical engineering firms frequently optimize solar panel layouts to maximize power output, especially as solar technology expands across residential rooftops, commercial buildings, and large‑scale solar farms. In this project, students will practice skills widely used in industry, including numerical optimization, MATLAB programming, and design‑based decision-making. With solar installations becoming more widespread, these skills will help those in engineering roles design sustainable energy systems in constrained environments.
